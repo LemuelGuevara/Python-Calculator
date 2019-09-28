@@ -3,15 +3,16 @@ from tkinter.font import BOLD
 
 root = Tk()
 
-display = StringVar()
+display = IntVar()
 expression = ""
+
 
 class Calc:
     def __init__(self, master):
         self.frame = Frame(master, width=375, height=600, bg='#262626')
         self.frame.pack()
 
-        self.entry = Entry(master, font=("Segoe UI", 36, BOLD), fg='white',bg='#262626', bd=0, textvariable=display, justify='right' )
+        self.entry = Entry(master, font=("Segoe UI", 36, BOLD), fg='white',bg='#262626', bd=0, textvariable=display, justify='right')
         self.entry.place(x=5, y=15, width=365, height=185)
 
         self.label = Label(master, text="Standard", font=("Segoe UI", 16),fg='white', bg='#262626', justify='right')
@@ -20,6 +21,8 @@ class Calc:
         self.label = Label(master, text="       MC             MR             M+              M-             MS",
         font=("Segoe UI", 10, BOLD), fg='white', bg='#262626')
         self.label.place(x=5, y=170)
+
+        
 
     # Numericals
         self.num_0 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='0', fg='white',
@@ -61,7 +64,7 @@ class Calc:
         self.operator_8 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='C', fg='white',
          activebackground='#343434', command=self.clear)
         self.operator_9 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='<---', fg='white',
-         activebackground='#343434')
+         activebackground='#343434', command=self.backspace)
         self.operator_10 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='÷', fg='white',
          activebackground='#343434', command=lambda:self.showtext("/"))
         self.operator_11 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='%', fg='white',
@@ -72,6 +75,8 @@ class Calc:
          activebackground='#343434', command=lambda:self.showtext("x²"))
         self.operator_14 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='1/x', fg='white',
          activebackground='#343434', command=lambda:self.showtext("1/x"))
+        
+
 
     # Placing
         self.num_0.place(x=98, y=533, width=90, height=63)
@@ -104,14 +109,17 @@ class Calc:
     def clear(self):
         global expression
         expression = ""
-        display.set("") 
+        display.set("0") 
+
+    def backspace(self):
+        self.entry.delete(0, last=1)
 
     def showtext(self, text):
         global expression
 
         expression = expression + str(text)
         display.set(expression)
-        
+
     def equalpress(self): 
         try: 
   
@@ -129,4 +137,5 @@ class Calc:
 c = Calc(root)
 root.title("Calculator")
 root.mainloop()
+
 
