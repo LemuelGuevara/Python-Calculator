@@ -2,10 +2,8 @@ from tkinter import *
 from tkinter.font import BOLD
 
 root = Tk()
-
 display = IntVar()
 expression = ""
-
 
 class Calc:
     def __init__(self, master):
@@ -21,8 +19,6 @@ class Calc:
         self.label = Label(master, text="       MC             MR             M+              M-             MS",
         font=("Segoe UI", 10, BOLD), fg='white', bg='#262626')
         self.label.place(x=5, y=170)
-
-        
 
     # Numericals
         self.num_0 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='0', fg='white',
@@ -76,8 +72,6 @@ class Calc:
         self.operator_14 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='1/x', fg='white',
          activebackground='#343434', command=lambda:self.showtext("1/x"))
         
-
-
     # Placing
         self.num_0.place(x=98, y=533, width=90, height=63)
         self.num_1.place(x=5, y=467, width=90, height=63)
