@@ -7,4 +7,4 @@ A replica of the windows calculator
 2. not all the functions work 
 3. the number limit is only until where the textbox is
 4. can't equate more than 2 expressions
-5. and thx to google for helping
+5. and thx to the internet for helping
