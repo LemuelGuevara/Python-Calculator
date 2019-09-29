@@ -9,7 +9,7 @@ class Calc:
 
     def __init__(self, master):
 
-        self.frame = Frame(master, width=375, height=600, bg='#262626')
+        self.frame = Frame(master, width=379, height=600, bg='#262626')
         self.frame.pack()
 
         self.entry = Entry(master, font=("Segoe UI", 36, BOLD), fg='white',bg='#262626', bd=0, textvariable=display, justify='right' )
