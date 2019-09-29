@@ -24,55 +24,55 @@ class Calc:
 
     # Numericals
         self.num_0 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='0', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("0"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("0"))
         self.num_1 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='1', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("1"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("1"))
         self.num_2 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='2', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("2"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("2"))
         self.num_3 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='3', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("3"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("3"))
         self.num_4 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='4', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("4"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("4"))
         self.num_5 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='5', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("5"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("5"))
         self.num_6 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='6', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("6"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("6"))
         self.num_7 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='7', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("7"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("7"))
         self.num_8 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='8', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("8"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("8"))
         self.num_9 = Button(master, relief=FLAT, font=("Segoe UI", 16, BOLD), bg='#121212', text='9', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("9"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("9"))
 
     # Operators
         self.operator_1 = Button(master, relief=FLAT,font=("Segoe UI", 16), bg='#1c1c1c',text='+/_', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("-"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("-"))
         self.operator_2 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='.', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("."))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("."))
         self.operator_3 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='=', fg='white',
-         activebackground='#343434', command=self.equalpress)
+         activebackground='#262626', activeforeground='white', command=self.equalpress)
         self.operator_4 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='+', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("+"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("+"))
         self.operator_5 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='-', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("-"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("-"))
         self.operator_6 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='×', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("*"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("*"))
         self.operator_7 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='CE', fg='white',
-         activebackground='#343434', command=self.clear)
+         activebackground='#262626', activeforeground='white', command=self.clear)
         self.operator_8 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='C', fg='white',
-         activebackground='#343434', command=self.clear)
+         activebackground='#262626', activeforeground='white', command=self.clear)
         self.operator_9 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='<---', fg='white',
-         activebackground='#343434', command=self.backspace)
+         activebackground='#262626', activeforeground='white', command=self.backspace)
         self.operator_10 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='÷', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("/"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("/"))
         self.operator_11 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='%', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("%"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("%"))
         self.operator_12 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='√x', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("√x"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("√x"))
         self.operator_13 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='x²', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("x²"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("x²"))
         self.operator_14 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='1/x', fg='white',
-         activebackground='#343434', command=lambda:self.showtext("1/x"))
+         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("1/x"))
 
     # Placing
         self.num_0.place(x=98, y=533, width=90, height=63)
