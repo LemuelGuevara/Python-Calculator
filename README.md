@@ -1,6 +1,6 @@
 # Python-Calculator
-A GUI Tkinter Python Calculator\n
-A replica of the windows calculator
+A GUI Tkinter Python Calculator
+*A replica of the windows calculator
 
 # Just some reminders
 1. install python tkinter
