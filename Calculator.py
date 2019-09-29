@@ -3,14 +3,16 @@ from tkinter.font import BOLD
 
 root = Tk()
 display = IntVar()
-expression = ""
+expression = "" 
 
 class Calc:
+
     def __init__(self, master):
+
         self.frame = Frame(master, width=375, height=600, bg='#262626')
         self.frame.pack()
 
-        self.entry = Entry(master, font=("Segoe UI", 36, BOLD), fg='white',bg='#262626', bd=0, textvariable=display, justify='right')
+        self.entry = Entry(master, font=("Segoe UI", 36, BOLD), fg='white',bg='#262626', bd=0, textvariable=display, justify='right' )
         self.entry.place(x=5, y=15, width=365, height=185)
 
         self.label = Label(master, text="Standard", font=("Segoe UI", 16),fg='white', bg='#262626', justify='right')
@@ -71,7 +73,7 @@ class Calc:
          activebackground='#343434', command=lambda:self.showtext("x²"))
         self.operator_14 = Button(master, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='1/x', fg='white',
          activebackground='#343434', command=lambda:self.showtext("1/x"))
-        
+
     # Placing
         self.num_0.place(x=98, y=533, width=90, height=63)
         self.num_1.place(x=5, y=467, width=90, height=63)
@@ -118,8 +120,7 @@ class Calc:
         try: 
   
             global expression 
-            total = str(eval(expression)) 
-            expression = "" 
+            total = str(eval(expression))
   
             display.set(total) 
         
@@ -127,9 +128,8 @@ class Calc:
   
             display.set(" error ") 
             expression = "" 
-
+        
 c = Calc(root)
 root.title("Calculator")
 root.mainloop()
-
 
