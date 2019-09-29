@@ -1,5 +1,5 @@
 # Python-Calculator
-A GUI Tkinter Python Calculator
+A GUI Tkinter Python Calculator\n
 A replica of the windows calculator
 
 # Just some reminders
