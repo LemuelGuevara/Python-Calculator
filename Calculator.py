@@ -1,5 +1,6 @@
 from tkinter import *  
 from tkinter.font import BOLD
+import math
 
 root = Tk()
 display = IntVar()
@@ -64,11 +65,11 @@ class Calc:
         self.operator_10 = Button(frame, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='÷', fg='white',
          activebackground='#262626', activeforeground='white', command=lambda:self.showtext("/"))
         self.operator_11 = Button(frame, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='%', fg='white',
-         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("%"))
+         activebackground='#262626', activeforeground='white', command=self.percent)
         self.operator_12 = Button(frame, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='√x', fg='white',
-         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("√x"))
+         activebackground='#262626', activeforeground='white', command=self.sqrt)
         self.operator_13 = Button(frame, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='x²', fg='white',
-         activebackground='#262626', activeforeground='white', command=lambda:self.showtext("x²"))
+         activebackground='#262626', activeforeground='white', command=self.pow)
         self.operator_14 = Button(frame, relief=FLAT, font=("Segoe UI", 16), bg='#1c1c1c', text='1/x', fg='white',
          activebackground='#262626', activeforeground='white', command=lambda:self.showtext("1/x"))
 
@@ -119,14 +120,31 @@ class Calc:
   
             global expression 
             total = str(eval(expression))
-  
             display.set(total) 
         
         except: 
   
             display.set(" error ") 
             expression = "" 
+    
+    def pow(self):  
+        global expression
         
+        total = str(int(expression) * int(expression))
+        display.set(total)
+    
+    def sqrt(self):
+        global expression
+
+        total = str(int(math.sqrt(int(expression))))
+        display.set(total)
+
+    def percent(self):
+        global expression
+
+        total = str(int(expression)/100)
+        display.set(float(total))
+
 c = Calc(root)
 root.title("Calculator")
 root.mainloop()
