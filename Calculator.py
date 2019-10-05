@@ -10,13 +10,10 @@ class Calc:
     def __init__(self, master):
         frame = Frame(master, width=379, height=600, bg='#262626')
         frame.pack()
-
         self.entry = Entry(frame, font=("Segoe UI", 36, BOLD), fg='white',bg='#262626', bd=0, textvariable=display, justify='right' )
         self.entry.place(x=5, y=15, width=368, height=185)
-
         self.label = Label(frame, text="Standard", font=("Segoe UI", 16),fg='white', bg='#262626')
         self.label.place(x=5, y=10, width=368)
-
         self.label = Label(frame, text="       MC             MR             M+              M-             MS",
         font=("Segoe UI", 10, BOLD), fg='white', bg='#262626')
         self.label.place(x=5, y=170)
