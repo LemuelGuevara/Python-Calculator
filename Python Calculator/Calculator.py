@@ -12,10 +12,10 @@ class Calc:
         frame.pack()
 
         self.entry = Entry(frame, font=("Segoe UI", 36, BOLD), fg='white',bg='#262626', bd=0, textvariable=display, justify='right' )
-        self.entry.place(x=5, y=15, width=365, height=185)
+        self.entry.place(x=5, y=15, width=368, height=185)
 
-        self.label = Label(frame, text="Standard", font=("Segoe UI", 16),fg='white', bg='#262626', justify='right')
-        self.label.place(x=5, y=10, width=365)
+        self.label = Label(frame, text="Standard", font=("Segoe UI", 16),fg='white', bg='#262626')
+        self.label.place(x=5, y=10, width=368)
 
         self.label = Label(frame, text="       MC             MR             M+              M-             MS",
         font=("Segoe UI", 10, BOLD), fg='white', bg='#262626')
@@ -136,7 +136,7 @@ class Calc:
     def sqrt(self):
         global expression
 
-        total = str(int(math.sqrt(int(expression))))
+        total = str(math.sqrt(int(expression)))
         display.set(total)
 
     def percent(self):
@@ -148,4 +148,3 @@ class Calc:
 c = Calc(root)
 root.title("Calculator")
 root.mainloop()
-
